@@ -1,100 +1,92 @@
-import Image from "next/image";
+import Link from "next/link";
+// button color #d0f424
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      {/* For when you first load in and see the green background*/}
+      <div className="h-[102vh] rounded-b-3xl bg-[#023e34]">
+        <nav className="justify-around pt-3">
+          <div>
+            <Link href="/">
+              <button className="px-4 py-2 text-white rounded hover:bg-[#036b68]">
+                Sign in
+              </button>
+            </Link>
+            <Link href="/">
+              <button className="px-4 py-2 bg-[#d0f424] text-[#023e34] rounded hover:bg-[#b0d800]">
+                Book a demo
+              </button>
+            </Link>
+          </div>
+        </nav>
+        <div className="flex flex-col items-center justify-center pt-24">
+          <h1 className="text-white text-center pt-24
+                text-4xl
+                sm:text-5xl
+                md:text-6xl
+                lg:text-[64px]
+                leading-[36px]
+                sm:leading-[48px]
+                md:leading-[60px]
+                lg:leading-[64px]
+                tracking-[-0.04em] max-w-xl break-words">The analytical layer for private markets</h1>
+          <p className="text-white text-center mt-4
+                leading-[24px]
+                lg:px-8
+                md:px-12
+                tracking-[-0.015em]
+                text-balance
+                lg:text-pretty">Aviato turns data into deals by delivering high-quality people and company intelligence to your fingertips</p>
+          <Link href="/">
+            <button className="px-4 py-2 bg-[#d0f424] text-[#023e34] rounded hover:bg-[#b0d800]">
+              Book a demo
+            </button>
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </div>
+      {/* This will be for everything under the initial screen when loaded in */}
+      <div>
+        <div className="pl-10 pt-14">
+          <p className="text-lg tracking-[-0.015em]">What is Aviato?</p>
+          <h1 className="mt-4 text-5xl max-w-2xl text-pretty text-left tracking-[-0.04em] leading-[58px]">The most comprehensive view on private markets there is, made accessible to you</h1>
+          {/* will deal with this later it is just switching between texts and images*/}
+          <div></div>
+        </div>
+        <div className="flex rounded-2xl bg-[#a00c8c] mx-4 p-8">
+          <div>
+            <h1 className="text-3xl tracking-[-0.02em] text-white">Work wherever you work with our API</h1>
+            <p className="mt-2 text-balance text-lg leading-6 tracking-[-0.015em] text-white">Aviato connects seamlessly
+              with top CRMs and tools. Powerful API enables an easy transition to data-driven choices, no process
+              disruption.</p>
+          </div>
+          <div>
+            This will be an image
+          </div>
+          <div>
+            This will be an image
+          </div>
+          <div>
+            This will be an image
+          </div>
+        </div>
+      </div>
+      <footer className="bg-[#023e34] text-white py-16">
+        <div className="grid md:grid-cols-2 gap-y-10 pl-16">
+          <div className="flex flex-col md:items-start justify-start items-center">
+            <p className="text-white tracking-[-0.015em] leading-6 mt-3">Get the latest Aviato company updates</p>
+          </div>
+          <div className="flex items-start justify-evenly text-center md:text-left flex flex-col gap-y-4 w-32">
+            <p className="text-white font-medium tracking-[-0.015em] leading-6">Company</p>
+            <ul className="flex flex-col md:gap-y-2 gap-y-4 w-full">
+              <li>Careers</li>
+              <li>Contact</li>
+              <li>X/Twitter</li>
+              <li>LinkedIn</li>
+
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
   );

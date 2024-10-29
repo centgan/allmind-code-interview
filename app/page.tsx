@@ -164,7 +164,7 @@ const Home: React.FC = () => {
                        lg:leading-[76px]
                        text-4xl leading-[48px]
                        text-black">
-          Get the clearest picture of what's next in private markets
+          Get the clearest picture of what&#39;s next in private markets
         </h2>
         <Link href="/">
           <button

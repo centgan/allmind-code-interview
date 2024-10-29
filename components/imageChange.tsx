@@ -46,6 +46,10 @@ const ImageChange: React.FC = () => {
     };
   }, [currentIndex, images.length]);
 
+  const handleButtonClick = (index:number):void => {
+    setCurrentIndex(index);
+  }
+
   return (
     <div className="flex justify-between mb-16">
       <div className="flex flex-col w-[500px]">
@@ -55,9 +59,9 @@ const ImageChange: React.FC = () => {
               className={`h-1 transition-width duration-500 ease-in-out ${currentIndex === index ? 'bg-teal-500' : 'bg-blue-200'}`}
               style={{ width: `${progress[index] || 0}%` }}
             />
-            <div className="m-4 text-black tracking-[-0.04em] text-2xl transition-opacity duration-300 opacity-100">
+            <button onClick={() => handleButtonClick(index)} className="m-4 text-black tracking-[-0.04em] text-2xl transition-opacity duration-300 opacity-100">
               {text[index]}
-            </div>
+            </button>
           </div>
         ))}
         <div className="mt-10 space-y-4 max-w-72">

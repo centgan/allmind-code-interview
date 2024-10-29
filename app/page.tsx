@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Card from "@/components/card";
-import Image, {StaticImageData} from 'next/image';
+import Image from 'next/image';
 import Aviato from "@/components/aviato";
 import AviatoIcon from "@/components/aviatoIcon";
 import Engineer from "@/images/engineers.png";
@@ -21,7 +21,7 @@ import React from "react";
 
 interface CardProps {
   title: string;
-  content: StaticImageData; // Adjust this type if you use different image formats
+  content: string; // Adjust this type if you use different image formats
 }
 
 const Home: React.FC = () => {

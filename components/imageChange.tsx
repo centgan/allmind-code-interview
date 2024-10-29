@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const ImageChange: React.FC = () => {
   const text: string[] = [
@@ -68,9 +69,11 @@ const ImageChange: React.FC = () => {
           <p className="text-lg tracking-[-0.015em] leading-6 text-black">
             Get exclusive data on any private company you can imagine
           </p>
-          <button className="px-4 py-2.5 rounded-md font-medium leading-none bg-black text-white hover:bg-white hover:text-black transition-colors duration-300">
-            Try it
-          </button>
+          <Link href="/try-it">
+            <button className="px-4 py-2.5 rounded-md font-medium leading-none bg-black text-white hover:bg-white hover:text-black transition-colors duration-300">
+              Try it
+            </button>
+          </Link>
         </div>
       </div>
       <div className="w-[700px] h-[350px] ml-4 rounded-2xl rounded-b-3xl mr-8 overflow-hidden">
